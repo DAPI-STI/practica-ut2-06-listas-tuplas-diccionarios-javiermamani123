@@ -14,3 +14,6 @@ def reverse_list(values: list[int]) -> list[int]:
     - reverse_list([]) -> []
     """
     raise NotImplementedError("Implementa reverse_list(values)")
+
+def reverse_list(values: list[int]) -> list[int]:
+    return values[::-1]
