@@ -14,3 +14,15 @@ def best_student(records: list[tuple[str, float]]) -> tuple[str, float]:
     [("Ana", 7.5), ("Luis", 9.0), ("Marta", 8.0)] -> ("Luis", 9.0)
     """
     raise NotImplementedError("Implementa best_student(records)")
+
+def best_student(records: list[tuple[str, float]]) -> tuple[str, float]:
+    if not records:
+        raise ValueError("La lista de alumnos está vacía")
+    
+    best = records[0]
+
+    for record in records:
+        if record[1] > best[1]:
+            best = record
+
+    return best
